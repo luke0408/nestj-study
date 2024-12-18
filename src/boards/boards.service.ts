@@ -19,6 +19,12 @@ export class BoardService {
         return board;
     }
 
+    updateBoardStatus(id: string, status: BoardStatus) {
+        const board = this.getBoardById(id);
+        board.status = status;
+        return board;
+    }
+
     getAllBoards(): Board[] {
         return this.boards;
     }
