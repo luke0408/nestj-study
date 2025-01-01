@@ -11,7 +11,7 @@ export class BoardStatusValidationPipe implements PipeTransform {
     }
     return value;
   }
-  
+
   private isStatusValid(status: string) {
     const index = this.StatusOptions.indexOf(status as BoardStatus);
     return index !== -1; // 유효한 값만 리턴
