@@ -4,12 +4,12 @@ import { CommonEntity } from './common/common.entity';
 
 @Entity()
 export class BoardEntity extends CommonEntity {
-  @Column({ type: 'text', length: 512 })
+  @Column({ type: 'varchar', length: 512 })
   title: string;
 
   @Column('text')
   descrition: string;
 
-  @Column('enum')
+  @Column({type: 'enum', enumName: 'BoardStatusType'})
   status: BoardStatus;
 }
