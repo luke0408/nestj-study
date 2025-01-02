@@ -1,5 +1,5 @@
 import { Param, Body, Get, Post, Delete, Patch, Controller, UsePipes, ValidationPipe } from '@nestjs/common';
-import { Board } from '../entities/board.entity';
+import { BoardEntity } from '../entities/board.entity';
 import { CreateBoardDto } from '../entities/dtos/create-board.dto';
 import { BoardStatusValidationPipe } from '../pipes/board-status-validation.pipe';
 import { BoardService } from '../services/boards.service';
@@ -10,18 +10,18 @@ export class BoardController {
   constructor(private boardService: BoardService) {}
 
   @Get('/')
-  getAllBoard(): Promise<Board[]> {
+  getAllBoard(): Promise<BoardEntity[]> {
     return this.boardService.getAllBoards();
   }
 
   @Post('/')
   @UsePipes(ValidationPipe)
-  createBoard(@Body() createBoardDto: CreateBoardDto): Promise<Board> {
+  createBoard(@Body() createBoardDto: CreateBoardDto): Promise<BoardEntity> {
     return this.boardService.createBoard(createBoardDto);
   }
 
   @Get('/:id')
-  getBoardById(@Param('id') id: number): Promise<Board> {
+  getBoardById(@Param('id') id: number): Promise<BoardEntity> {
     return this.boardService.getBoardById(id);
   }
 
