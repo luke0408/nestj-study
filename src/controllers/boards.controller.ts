@@ -1,9 +1,9 @@
 import { Param, Body, Get, Post, Delete, Patch, Controller, UsePipes, ValidationPipe } from '@nestjs/common';
-import { Board } from './board.entity';
-import { BoardStatus } from './board.status.enum';
-import { BoardService } from './boards.service';
-import { CreateBoardDto } from './dto/create-board.dto';
-import { BoardStatusValidationPipe } from './pipes/board-status-validation.pipe';
+import { Board } from '../entities/board.entity';
+import { CreateBoardDto } from '../entities/dtos/create-board.dto';
+import { BoardStatusValidationPipe } from '../pipes/board-status-validation.pipe';
+import { BoardService } from '../services/boards.service';
+import { BoardStatus } from '../types/enums/board-status.enum';
 
 @Controller('boards')
 export class BoardController {
