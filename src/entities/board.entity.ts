@@ -10,6 +10,6 @@ export class BoardEntity extends CommonEntity {
   @Column('text')
   description: string;
 
-  @Column({type: 'enum', enumName: 'BoardStatusType'})
+  @Column({ type: 'enum', enumName: 'BoardStatusType' })
   status: BoardStatus;
 }
