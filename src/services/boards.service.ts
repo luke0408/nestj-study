@@ -17,7 +17,7 @@ export class BoardService {
 
     const board = this.boardRepository.create({
       title: title,
-      descrition: description,
+      description: description,
       status: BoardStatus.PUBLIC,
     });
 
