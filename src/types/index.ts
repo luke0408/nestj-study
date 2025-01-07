@@ -49,3 +49,11 @@ export interface PaginationForm<T extends InitialPaginationResponseType> {
   requestToResponse?: `${number}ms`;
   data: PaginationResponseType<T>;
 }
+
+/**
+ * Try-Catch Types
+ */
+export type Try<T> = ResponseForm<T>;
+export type TryCatch<T, E extends ValueOfError> = ResponseForm<T> | E;
+export type TryPagination<T extends InitialPaginationResponseType> = PaginationForm<T>;
+export type TryCatchPagination<T extends InitialPaginationResponseType, E extends ValueOfError> = PaginationForm<T> | E;
