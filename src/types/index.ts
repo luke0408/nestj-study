@@ -26,8 +26,26 @@ export type ValueOfError = ERROR[KeyOfError];
 
 /**
  * Pagination Types
+ * 
+ * TODO: 하나의 인터페이스로 통합하기. ex) PaginationForm을 사용하지 않고 반환값 구현 등
  */
 export interface InitialPaginationResponseType {
   list: any[];
   count: number;
+}
+
+export interface PaginationResponseType<T extends InitialPaginationResponseType> {
+  list: T['list'];
+  count: T['count'];
+  totalResult: number;
+  totalPage: number;
+  search?: string;
+  page: number;
+}
+
+export interface PaginationForm<T extends InitialPaginationResponseType> {
+  result: true;
+  code: 1000;
+  requestToResponse?: `${number}ms`;
+  data: PaginationResponseType<T>;
 }
