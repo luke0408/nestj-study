@@ -1,11 +1,11 @@
 import * as path from 'path';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { TypeOrmModuleOptions as OrmOptions } from '@nestjs/typeorm';
+import { TypeOrmModuleAsyncOptions } from '@nestjs/typeorm';
 
-export const TypeOrmModuleOptions = {
+export const TypeOrmModuleOptions: TypeOrmModuleAsyncOptions = {
   imports: [ConfigModule],
   inject: [ConfigService],
-  userFactory: async (configService: ConfigService): Promise<OrmOptions> => {
+  useFactory: async (configService: ConfigService) => {
     const NODE_ENV = configService.get('NODE_ENV');
 
     const option = {
