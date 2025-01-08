@@ -8,8 +8,7 @@ import { BoardStatus } from '../types/enums/board-status.enum';
 @Injectable()
 export class BoardService {
   constructor(
-    @InjectRepository(BoardRespository)
-    private boardRepository: BoardRespository,
+    @InjectRepository(BoardRespository) private readonly boardRepository: BoardRespository,
   ) {}
 
   async createBoard(createBoardDto: CreateBoardDto): Promise<BoardEntity> {
