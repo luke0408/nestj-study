@@ -1,5 +1,5 @@
 import { Repository } from 'typeorm';
-import { CustomRepository } from '../configs/custom-typeorm.decorator';
+import { CustomRepository } from '../configs/typeorm/custom-typeorm.decorator';
 import { BoardEntity } from '../models/tables/board.entity';
 
 @CustomRepository(BoardEntity)

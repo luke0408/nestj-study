@@ -3,7 +3,7 @@ import { Test } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import assert from 'node:assert';
 import { describe, it, before } from 'node:test';
-import { TypeOrmModuleOptions } from '../../configs/';
+import { TypeOrmModuleOptions } from '../../configs/typeorm';
 import { BoardController } from '../../controllers/boards.controller';
 import { BoardEntity } from '../../models/tables/board.entity';
 import { BoardModule } from '../../modules/boards.module';
