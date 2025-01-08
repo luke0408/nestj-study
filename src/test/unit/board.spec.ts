@@ -1,8 +1,8 @@
+import assert from 'node:assert';
+import { describe, it, before } from 'node:test';
 import { ConfigModule } from '@nestjs/config';
 import { Test } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import assert from 'node:assert';
-import { describe, it, before } from 'node:test';
 import { TypeOrmModuleOptions } from '../../configs/typeorm';
 import { BoardController } from '../../controllers/boards.controller';
 import { BoardEntity } from '../../models/tables/board.entity';
@@ -41,7 +41,6 @@ describe('BoardController', () => {
 
   describe('1. GET api/v1/getAllBoard을 호출 할 때', () => {
     describe('리턴 값은', () => {
-      
       /**
        * Response
        */
@@ -54,7 +53,7 @@ describe('BoardController', () => {
       });
 
       it('배열의 형태여야 한다.', async () => {
-        assert.call(console.log(list))
+        assert.call(console.log(list));
         assert.strictEqual(list instanceof Array, true);
         assert.strictEqual(typeof length, 'number');
       });
