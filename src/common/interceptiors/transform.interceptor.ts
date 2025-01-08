@@ -1,4 +1,4 @@
-import { InitialPaginationResponseType, PaginationForm } from "../../types";
+import { InitialPaginationResponseType, PaginationForm, Try } from "../../types";
 
 export const calcListTotalCount = (totalCount = 0, limit = 0): { totalResult: number; totalPage: number } => {
 	const totalResult = totalCount;
@@ -26,4 +26,13 @@ export function createPaginationForm<ResponseType extends InitialPaginationRespo
 			search,
 		},
 	};
+}
+
+export function createResponseForm<T>(data: T, requestToResponse?: `${number}ms`): Try<T> {
+	return {
+		result: true,
+		code: 1000,
+		requestToResponse,
+		data,
+	} as const;
 }
