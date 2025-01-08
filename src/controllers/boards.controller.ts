@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
-import { BoardEntity } from '../entities/board.entity';
-import { CreateBoardDto } from '../entities/dtos/create-board.dto';
+import { BoardEntity } from '../models/tables/board.entity';
+import { CreateBoardDto } from '../models/dtos/create-board.dto';
 import { BoardService } from '../services/boards.service';
 import { BoardStatus } from '../types/enums/board-status.enum';
 import { TypedBody, TypedParam, TypedRoute } from '@nestia/core';

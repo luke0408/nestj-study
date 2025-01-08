@@ -5,7 +5,7 @@ import assert from 'node:assert';
 import { describe, it, before } from 'node:test';
 import { TypeOrmModuleOptions } from '../../configs/';
 import { BoardController } from '../../controllers/boards.controller';
-import { BoardEntity } from '../../entities/board.entity';
+import { BoardEntity } from '../../models/tables/board.entity';
 import { BoardModule } from '../../modules/boards.module';
 import { BoardService } from '../../services/boards.service';
 
