@@ -14,13 +14,14 @@ export class BoardService {
   async createBoard(createBoardDto: CreateBoardDto): Promise<BoardEntity> {
     const { title, description } = createBoardDto;
 
-    const board = this.boardRepository.create({
-      title: title,
-      description: description,
-      status: BoardStatus.PUBLIC,
-    });
+    const board = await this.boardRepository.save(
+      BoardEntity.create({
+        title: title,
+        description: description,
+        status: BoardStatus.PUBLIC,
+      }),
+    );
 
-    await this.boardRepository.save(board);
     return board;
   }
 
