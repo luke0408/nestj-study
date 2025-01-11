@@ -15,7 +15,7 @@ export const TypeOrmModuleOptions: TypeOrmModuleAsyncOptions = {
       username: configService.get(`${NODE_ENV}_DB_USERNAME`),
       database: configService.get(`${NODE_ENV}_DB_DATABASE`),
       password: configService.get(`${NODE_ENV}_DB_PASSWORD`),
-      entities: [path.join(__dirname, '../entities/*.entity.ts')],
+      entities: [path.join(__dirname, '../../models/tables/*.ts')],
       synchronize: NODE_ENV === 'LOCAL' ? true : false,
       ...(NODE_ENV === 'DEVELOPMENT' || NODE_ENV === 'LOCAL'
         ? { retryAttempts: 10, logging: true }
