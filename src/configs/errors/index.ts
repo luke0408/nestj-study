@@ -1,26 +1,25 @@
 // export * as business from './business-error';
-
-import { Merge } from "../../types";
+import { Merge } from '../../types';
 
 export interface ERROR {
-    type: string;
-    result: false;
-    code: number;
-    data: string;
+  type: string;
+  result: false;
+  code: number;
+  data: string;
 }
 
 export const inBusinessErrorGuard = (obj: any): obj is Merge<ERROR, { type: 'business' }> => {
-    if (isErrorGuard(obj)) {
-        if (obj.type === 'business') {
-            return true;
-        }
+  if (isErrorGuard(obj)) {
+    if (obj.type === 'business') {
+      return true;
     }
-    return false;
+  }
+  return false;
 };
 
 export const isErrorGuard = (obj: any): obj is ERROR => {
-    if (obj.result === false) {
-        return true;
-    }
-    return false;
+  if (obj.result === false) {
+    return true;
+  }
+  return false;
 };
