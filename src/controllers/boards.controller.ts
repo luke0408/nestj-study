@@ -1,7 +1,7 @@
 import { TypedBody, TypedParam, TypedRoute } from '@nestia/core';
 import { Controller } from '@nestjs/common';
-import { createResponseForm } from 'src/common/interceptiors/transform.interceptor';
 import { Try } from 'src/types';
+import { createResponseForm } from '../common/interceptiors/transform.interceptor';
 import { CreateBoardDto } from '../models/dtos/create-board.dto';
 import { BoardEntity } from '../models/tables/board.entity';
 import { BoardService } from '../services/boards.service';

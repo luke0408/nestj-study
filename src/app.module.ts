@@ -6,5 +6,6 @@ import { BoardModule } from './modules/boards.module';
 
 @Module({
   imports: [TypeOrmModule.forRootAsync(TypeOrmModuleOptions), ConfigModule.forRoot({ isGlobal: true }), BoardModule],
+  controllers: [],
 })
 export class AppModule {}

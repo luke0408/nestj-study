@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CustomTypeOrmModule } from '../configs/typeorm/custom-typeorm.module';
-import { BoardRespository } from '../repositories/board.repository';
 import { BoardController } from '../controllers/boards.controller';
+import { BoardRespository } from '../repositories/board.repository';
 import { BoardService } from '../services/boards.service';
 
 @Module({
