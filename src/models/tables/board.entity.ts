@@ -1,15 +1,15 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { BoardStatus } from '../../types/enums/board-status.enum';
-import { CommonEntity } from '../common/common.entity';
+import { CommonColums } from '../common/common-columns';
 
 @Entity()
-export class BoardEntity extends CommonEntity {
+export class BoardEntity extends CommonColums {
   @Column({ type: 'varchar', length: 512 })
   title: string;
 
   @Column('text')
   description: string;
 
-  @Column({ type: 'enum', enumName: 'BoardStatusType' })
+  @Column({ type: 'enum', enumName: 'BoardStatusType', enum: BoardStatus })
   status: BoardStatus;
 }
