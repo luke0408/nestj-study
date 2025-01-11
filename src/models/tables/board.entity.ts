@@ -2,7 +2,7 @@ import { Column, Entity } from 'typeorm';
 import { BoardStatus } from '../../types/enums/board-status.enum';
 import { CommonColums } from '../common/common-columns';
 
-@Entity()
+@Entity({ name: 'board'})
 export class BoardEntity extends CommonColums {
   @Column({ type: 'varchar', length: 512 })
   title: string;
