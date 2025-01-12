@@ -1,12 +1,20 @@
 {
-  "name": "e-commerce",
-  "description": "e-commerce project with nest.js",
-  "type": "commonjs",
+  "name": "@luke_choi/e-commerce",
   "version": "0.0.1",
   "private": true,
-  "main": "index.js",
-  "author": "Google LLC",
+  "description": "e-commerce project with nest.js",
+  "homepage": "https://github.com/luke0408/nestj-study#readme",
+  "bugs": {
+    "url": "https://github.com/luke0408/nestj-study/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luke0408/nestj-study.git"
+  },
   "license": "Apache-2.0",
+  "author": "Google LLC",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\"",

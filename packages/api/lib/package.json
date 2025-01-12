@@ -1,0 +1,21 @@
+{
+    "name": "@luke_choi/server-apis",
+    "version": "0.0.0",
+    "description": "API for PROJECT",
+    "homepage": "http://#readme",
+    "repository": {
+        "type": "git"
+    },
+    "license": "MIT",
+    "author": "luke_choi",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "@nestia/fetcher": "^1.0.1",
+        "typia": "^3.6.8"
+    },
+    "typings": "index.d.ts"
+}
