@@ -12,9 +12,7 @@ export class BoardService {
     private readonly boardRepository: BoardRespository,
   ) {}
 
-  async createBoard(createBoardDto: CreateBoardDto): Promise<BoardEntity> {
-    const { title, description } = createBoardDto;
-
+  async createBoard({title, description}: CreateBoardDto): Promise<BoardEntity> {
     const board = await this.boardRepository.save(
       BoardEntity.create({
         title: title,
