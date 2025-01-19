@@ -37,8 +37,13 @@
 
     # Workspace lifecycle hooks
     workspace = {
-      onCreate = {};
-      onStart = {};
+      onCreate = {
+        npm-install = "npm install";
+      };
+
+      onStart = {
+        docker-compose-up = "docker compose up -d";
+      };
     };
   };
 }
