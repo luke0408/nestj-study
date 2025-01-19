@@ -22,7 +22,12 @@
   };
 
   idx = {
-    extensions = [];
+    extensions = [ 
+      "esbenp.prettier-vscode"
+      "rvest.vs-code-prettier-eslint"
+      "christian-kohler.path-intellisense"
+      "formulahendry.code-runner"
+    ];
 
     # Enable previews
     previews = {
