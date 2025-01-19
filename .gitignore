@@ -136,6 +136,3 @@ packages/**/*.ts
 packages/**/*.js
 
 src/api
-
-# google idx
-.idx/
