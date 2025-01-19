@@ -1,9 +1,3 @@
-import { IsNotEmpty } from 'class-validator';
+import { BoardEntity } from '../tables/board.entity';
 
-export class CreateBoardDto {
-  @IsNotEmpty()
-  title: string;
-
-  @IsNotEmpty()
-  description: string;
-}
+export interface CreateBoardDto extends Pick<BoardEntity, 'title' | 'description'> {}

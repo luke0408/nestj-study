@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-import type { ERROR } from 'src/configs/errors';
+import type { ERROR } from '../configs/errors';
 
 /**
  * Common Util Types

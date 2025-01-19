@@ -5,11 +5,11 @@ import { CommonColums } from '../common/common-columns';
 @Entity({ name: 'board'})
 export class BoardEntity extends CommonColums {
   @Column({ type: 'varchar', length: 512 })
-  title: string;
+  title!: string;
 
   @Column('text')
-  description: string;
+  description!: string;
 
-  @Column({ type: 'enum', enumName: 'BoardStatusType', enum: BoardStatus })
-  status: BoardStatus;
+  @Column({ type: 'enum', enumName: 'BoardStatusType', enum: BoardStatus, default: BoardStatus.PUBLIC })
+  status!: BoardStatus;
 }
